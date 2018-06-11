@@ -10,9 +10,12 @@ import UIKit
 
 class HelloWorldViewController: UIViewController {
 
+    @IBOutlet weak var messageLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        messageLabel.text = "Welcome!"
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +24,13 @@ class HelloWorldViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func helloTapped(_ sender: Any) {
+        messageLabel.text = "Hello World"
+    }
+    
+    @IBAction func clearTapped(_ sender: Any) {
+        messageLabel.text = ""
+    }
     /*
     // MARK: - Navigation
 
